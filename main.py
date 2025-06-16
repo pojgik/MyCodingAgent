@@ -32,7 +32,7 @@ if __name__ == "__main__":
                 ),
         )
     except Exception as e:
-        print(f"Error sending request to Gemini: {e}", stderr)
+        print(f"Error sending request to Gemini: {e}")
         sys.exit(1)
     
     if (len(sys.argv) > 2):
