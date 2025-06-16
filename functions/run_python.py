@@ -23,7 +23,7 @@ def run_python_file(working_directory, file_path, args=None):
             capture_output=True,
             text=True,
             timeout=30,
-            cwd=abs_working_dir,
+            cwd=abs_working_directory,
         )
         output = []
         if result.stdout:
@@ -50,7 +50,7 @@ schema_run_python_file = types.FunctionDeclaration(
             ),
             "args": types.Schema(
                 type=types.Type.ARRAY,
-                description="Optional arguments to pass to the Python file.",
+                description="Optional arguments to pass to the Python file. If no arguments are specified, run the file with no arguments.",
                 items=types.Schema(type=types.Type.STRING),
             ),
         },
